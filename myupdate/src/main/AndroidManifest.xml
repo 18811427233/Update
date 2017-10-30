@@ -13,9 +13,9 @@
 
         <receiver android:name=".ApkInstallReceiver">
             <intent-filter>
-                <action android:name="DownloadManager.ACTION_DOWNLOAD_COMPLETE"/>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
             </intent-filter>
-
         </receiver>
     </application>
 
