@@ -49,7 +49,7 @@ def libName = "myupdate"
 group = "demo.mirror.com.myupdate"
 
 // 版本号，//compile引用时的最后部分项目名，下次更新是只需要更改版本号即可
-version = "1.0.2"
+version = "1.0.3"
 //上面配置后上传至JCenter后的编译路径是这样的：compile 'com.ddz.materialdesign:FloatingActionButton:1.0.1'
 
 // 生成源文件
