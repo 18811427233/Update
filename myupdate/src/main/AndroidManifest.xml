@@ -11,6 +11,12 @@
             android:enabled="true"
             />
 
+        <receiver android:name=".ApkInstallReceiver">
+            <intent-filter>
+                <action android:name="DownloadManager.ACTION_DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
