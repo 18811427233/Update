@@ -3,6 +3,7 @@ package demo.mirror.com.myupdate;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 
 /**
  * 下载工具类
@@ -18,6 +19,7 @@ public class UpdateManager {
      */
     public static void update(Context context, String providerFile, String url) {
 
+        Log.e("=======","=======providerFile======"+providerFile+"==url====="+url);
         SharedPrefsUtil.putValue(context, "PROVIDER_FILE", providerFile);
 
         Intent serviceIntent = new Intent(context, DownloadService.class);
