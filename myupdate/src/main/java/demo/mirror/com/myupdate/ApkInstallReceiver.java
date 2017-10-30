@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.content.FileProvider;
+import android.util.Log;
 
 import java.io.File;
 
@@ -21,6 +22,8 @@ public class ApkInstallReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         if (intent.getAction().equals(DownloadManager.ACTION_DOWNLOAD_COMPLETE)) {
+
+            Log.e("=======","====111111ACTION_DOWNLOAD_COMPLETE===");
             //处理 下载完成
             long downloadApkId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
 
@@ -55,7 +58,10 @@ public class ApkInstallReceiver extends BroadcastReceiver {
      */
     private static void installApk(Context context, File file) {
 
+
         if (Build.VERSION.SDK_INT >= 24) {//判读版本是否在7.0以上
+
+            Log.e("=======","====222222ACTION_DOWNLOAD_COMPLETE===");
 
             String providerFile = SharedPrefsUtil.getValue(context, "PROVIDER_FILE", "");
 
@@ -67,6 +73,9 @@ public class ApkInstallReceiver extends BroadcastReceiver {
             install.setDataAndType(apkUri, "application/vnd.android.package-archive");
             context.startActivity(install);
         } else {
+
+            Log.e("=======","====333333ACTION_DOWNLOAD_COMPLETE===");
+
             Intent install = new Intent(Intent.ACTION_VIEW);
             install.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
             install.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
