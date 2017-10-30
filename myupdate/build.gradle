@@ -38,15 +38,15 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 //项目主页--项目的GitHub地址
-def siteUrl = 'http://118.190.90.144/zhangzhuang/TestDemo'
+def siteUrl = 'https://github.com/18811427233/Update'
 //项目的git地址
-def gitUrl = 'http://118.190.90.144/zhangzhuang/TestDemo.git'
+def gitUrl = 'https://github.com/18811427233/Update.git'
 
 //发布到JCenter上的项目名字，compile引用时的第2部分项目名
-def libName = "updatelibrary"
+def libName = "myupdate"
 
 //compile引用时的第1部分
-group = "demo.mirror.com.myapplication"
+group = "demo.mirror.com.myupdate"
 
 // 版本号，//compile引用时的最后部分项目名，下次更新是只需要更改版本号即可
 version = "1.0.1"
@@ -110,7 +110,7 @@ bintray {
         //这里的repo值必须要和你创建Maven仓库的时候的名字一样，我们前面创建的就是maven
         repo = "maven"
         //发布到JCenter上的项目名字
-        name = "updatelibrary"
+        name = "myupdate"
         //项目描述
         desc = 'A customizable FloatingActionButton on Android'
         websiteUrl = siteUrl
